@@ -48,11 +48,3 @@ valid_parenthesis :: proc(input: string, stack: ^st.Stack) -> bool {
 
 	return len(stack.data) == 0
 }
-
-main :: proc() {
-	js_code := "([)]"
-	s := st.Stack{}
-	valid_parenthesis(js_code, &s)
-	fmt.println(valid_parenthesis(js_code, &s))
-
-}
