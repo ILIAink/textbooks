@@ -13,7 +13,29 @@ My_Union :: union {
 	Person,
 }
 
+
 main :: proc() {
-	val: My_Union = 12.2
-	fmt.println()
+	val: My_Union
+	val = Person {
+		age    = 32,
+		health = 100,
+	}
+
+	// switch v in val {
+	// case int:
+	// 	fmt.println("you're an int")
+	// case f32:
+	// 	fmt.println("you're a float")
+	// case Person:
+	// 	fmt.println("you're a person struct")
+	// }
+	//
+	//
+	if person_val, ok := &val.(Person); ok {
+		person_val.age = 42
+	}
+
+
+	fmt.println(val)
+
 }
