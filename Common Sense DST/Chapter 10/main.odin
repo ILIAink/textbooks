@@ -48,7 +48,7 @@ main :: proc() {
 	ensure(arena_err == nil)
 	arena_alloc := vmem.arena_allocator(&arena)
 	curr_dir, err := os.get_working_directory(arena_alloc)
-	fmt.println(curr_dir)
+	list_dir_deep(curr_dir, arena_alloc)
 
 	fmt.println(low_high_sum(1, 10))
 }
