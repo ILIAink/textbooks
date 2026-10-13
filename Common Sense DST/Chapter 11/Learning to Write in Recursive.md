@@ -44,7 +44,7 @@ To solve our problem of finding the sum of `[1, 2, 3, 4, 5]` then, we can just a
 `return array[0] + sum(the remainder of the array)`
 
 In odin, we can do the following `return arr[0] + sum_factorial(arr[1:len(arr)]` (This is non inclusive, so it goes up to `len(arr)`, but won't include it. And we are done. We only need to worry about the base case, when the array just has one element, we just return it. It will look something like this:
-```
+```odin
 sum_factorial :: proc(arr: []int) -> int {
 	if len(arr) == 1 {
 		return arr[0]
